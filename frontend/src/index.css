@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff8a5b;
+  --color-primary-hover: #e87a4e;
+  --color-danger: #ea526f;
+  --color-danger-hover: #d4485f;
+  --color-card: #fceade;
+  --color-card-text: #25ced1;
+  --color-bg: #faf9f7;
+  --font-sans: "Josefin Sans", sans-serif;
+}
+
+* {
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+/* Fix for Lucide icon and text alignment */
+svg.lucide {
+  display: inline-block;
+  vertical-align: middle;
+}
