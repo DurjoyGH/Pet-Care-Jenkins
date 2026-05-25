@@ -20,7 +20,7 @@ export default function Home() {
                 <span className="text-primary">Share Your Story</span>
               </h1>
               <p className="text-gray-500 text-lg mb-8 max-w-lg">
-                PetCare is a community where pet lovers share tips, stories, and
+                Pet Care is a community where pet lovers share tips, stories, and
                 heartfelt moments about their furry companions.
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
