@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    container_name: petcare_backend
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - ./backend/.env
+
+    restart: always
+
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    container_name: petcare_frontend
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - backend
+
+    restart: always
