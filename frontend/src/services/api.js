@@ -2,7 +2,7 @@ import axios from "axios";
 import { createAuth } from "@smart-auth/core";
 import { createSmartAxios } from "@smart-auth/axios";
 
-const API_BASE = "http://backend:5000/api/v1";
+const API_BASE = "http://localhost:5000/api/v1";
 
 // Initialize @smart-auth/core auth engine
 export const auth = createAuth({
