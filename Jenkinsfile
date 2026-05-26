@@ -37,6 +37,16 @@ EOF
             }
         }
 
+        stage('Run Tests') {
+            steps {
+                sh '''
+                cd backend
+                npm ci
+                npm test
+                '''
+            }
+        }
+
         stage('Build Containers') {
             steps {
                 sh 'docker compose build'
