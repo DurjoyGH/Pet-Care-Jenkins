@@ -2,6 +2,7 @@ jest.mock("@smart-auth/express", () => ({
   createTokenIssuer: () => ({
     issueAccessToken: () => "mock-access",
     issueRefreshToken: () => "mock-refresh",
+    issueTokenPair: () => ({ accessToken: "mock-access", refreshToken: "mock-refresh" }),
   }),
   verifyAccessToken: () => (req, _res, next) => {
     req.auth = { userId: "user-1", roles: ["admin"] };

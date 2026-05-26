@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "node server.js",
     "seed": "node seed.js",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "test:coverage": "jest --runInBand --coverage"
   },
   "devDependencies": {
     "jest": "^29.7.0",
